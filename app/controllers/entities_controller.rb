@@ -72,7 +72,7 @@ class EntitiesController < ApplicationController
     end
 
     respond_to do |format|
-      if @entity.update_attributes(params[:entity])
+      if @entity.update_attributes(:entity => params[:entity])
         format.html { redirect_to @entity, notice: 'Password was successfully updated.' }
       else
         @group_options = Group.all

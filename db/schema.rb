@@ -110,6 +110,8 @@ ActiveRecord::Schema.define(version: 20120710231044) do
     t.string   "last_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password", :default => "", :null => false
+    t.string   "password_confirmation", :default => "", :null => false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

@@ -28,7 +28,7 @@ class UsersController < ApplicationController
     end
 
     respond_to do |format|
-      if @user.update_attributes(params[:user], :as => :admin)
+      if @user.update_attributes(:user => params[:user], :as => :admin)
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
       else
         flash[:error] = @user.errors.full_messages.join('<br />')

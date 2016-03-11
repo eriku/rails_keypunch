@@ -41,7 +41,7 @@ class GroupsController < ApplicationController
     @group = Group.find(params[:id])
 
     respond_to do |format|
-      if @group.update_attributes(params[:group])
+      if @group.update_attributes(:group => params[:group])
         format.html { redirect_to @group, notice: 'Group was successfully updated.' }
       else
         flash[:error] = @group.errors.full_messages.join('<br />')
