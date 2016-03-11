@@ -44,7 +44,7 @@ group :test, :development do
   gem 'factory_girl'
   gem 'faker'
   gem 'launchy'
-  gem 'specjour'
+  # gem 'specjour'
   # gem 'debugger'
   gem 'minitest'
   gem 'pickler'
